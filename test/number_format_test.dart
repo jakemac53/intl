@@ -4,7 +4,7 @@
 
 library number_format_test;
 
-import 'package:unittest/unittest.dart';
+import 'package:test/test.dart';
 import 'package:intl/number_symbols_data.dart';
 import 'package:intl/intl.dart';
 import 'number_test_data.dart';
@@ -74,7 +74,7 @@ main() {
   // For data from a list of locales, run each locale's data as a separate
   // test so we can see exactly which ones pass or fail. The test data is
   // hard-coded as printing 123, -12.3, %12,300, -1,230% in each locale.
-  var mainList = numberTestData;
+  Iterable mainList = numberTestData;
   var sortedLocales = new List.from(numberFormatSymbols.keys);
   sortedLocales.sort((a, b) => a.compareTo(b));
   for (var locale in sortedLocales) {

@@ -10,8 +10,10 @@ dependencies:
   path: '>=0.9.0 <2.0.0'
 dev_dependencies:
   fixnum: '>=0.9.0 <0.11.0'
-  unittest: '>=0.10.0 <0.12.0'
+  test: any
 transformers:
+- test/pub_serve:
+    $include: test/**_test.dart
 - $dart2js:
     $exclude:
     - test/date_time_format_file_even_test.dart
